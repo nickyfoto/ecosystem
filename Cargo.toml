@@ -7,7 +7,7 @@ edition = "2021"
 
 [dependencies]
 anyhow = "1.0.86"
-derive_builder = "0.20.0"
+derive_builder = "0.20.1"
 serde = { version = "1.0.209", features = ["derive"] }
 serde_json = "1.0.127"
 thiserror = "1.0.63"
@@ -24,7 +24,7 @@ derive_more = { version = "1.0.0", features = ["full"] }
 http = "1.1.0"
 serde_with = "3.9.0"
 strum = { version = "0.26.3", features = ["derive"] }
-tokio = { version = "1.39.3", features = [
+tokio = { version = "1.40.0", features = [
     "rt",
     "rt-multi-thread",
     "macros",
@@ -32,3 +32,13 @@ tokio = { version = "1.39.3", features = [
     "net",
     "io-util",
 ] }
+tokio-util = { version = "0.7.11", features = ["codec"] }
+console-subscriber = "0.4.0"
+dashmap = "6.0.1"
+futures = "0.3.30"
+sqlx = { version = "0.8.1", features = [
+    "postgres",
+    "runtime-tokio",
+    "tls-rustls",
+] }
+nanoid = "0.4.0"
