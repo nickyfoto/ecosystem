@@ -53,7 +53,7 @@ async fn main() -> Result<()> {
         .route("/", post(shorten))
         .route("/:id", get(redirect))
         .with_state(state);
-    axum::serve(listener, app.into_make_service()).await?;
+    axum::serve(listener, app).await?;
     Ok(())
 }
 
